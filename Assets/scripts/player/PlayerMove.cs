@@ -90,7 +90,7 @@ public class PlayerMove : MonoBehaviour
             {
                 weaponPos.Set(-0.3f, -1.22f);
             }
-
+            weapon.SetActive(true);
             weapon.transform.position = new Vector2(transform.position.x, transform.position.y) + weaponPos;
             weapon.transform.Rotate(0, 0, weaponRot);
             animator.SetBool("isAttack", true);
@@ -104,6 +104,7 @@ public class PlayerMove : MonoBehaviour
             weapon.transform.position = new Vector2(transform.position.x, transform.position.y);
             animator.SetBool("isAttack", false);
             weaponAnimator.SetBool("isAttack", false);
+            weapon.SetActive(false);
         }
 
         if (moveValue == Vector2.zero)
