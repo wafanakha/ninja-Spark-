@@ -13,6 +13,7 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     private int index;
+    private float submitTimer = 0.2f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,30 +24,27 @@ public class Dialogue : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float submitValue = submit.ReadValue<float>();
-        bool submitBool;
-        if (submitValue == 0)
+        // Debug.Log(submitTimer);
+        if (submitValue == 1 && submitTimer <= 0)
         {
-            submitBool = false;
-        }
-        else
-        {
-            submitBool = true;
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
+            Debug.Log("HIT");
             if (textComponent.text == lines[index])
             {
                 nextLine();
+                submitTimer = 0.2f;
             }
             else
             {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
+                submitTimer = 0.2f;
             }
         }
+        submitTimer -= Time.deltaTime;
+
     }
 
     void StartDialogue()
