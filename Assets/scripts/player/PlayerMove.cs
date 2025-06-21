@@ -26,6 +26,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // import component
         move = InputSystem.actions.FindAction("Move");
         attack = InputSystem.actions.FindAction("Attack");
         Player_rigidbody = GetComponent<Rigidbody2D>();
@@ -90,6 +91,7 @@ public class PlayerMove : MonoBehaviour
             {
                 weaponPos.Set(-0.3f, -1.22f);
             }
+            // set animation to attack
             weapon.SetActive(true);
             weapon.transform.position = new Vector2(transform.position.x, transform.position.y) + weaponPos;
             weapon.transform.Rotate(0, 0, weaponRot);
@@ -107,6 +109,7 @@ public class PlayerMove : MonoBehaviour
             weapon.SetActive(false);
         }
 
+        // set value if player stop moving
         if (moveValue == Vector2.zero)
         {
             animator.SetBool("isStop", true);
@@ -117,6 +120,7 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("isStop", false);
 
         }
+        // set animator value if get hit
         if (inframes <= 0.6f)
         {
             fxAnimator.SetBool("isHurt", false);
@@ -124,6 +128,7 @@ public class PlayerMove : MonoBehaviour
         // move
         Player_rigidbody.position += moveValue * Time.deltaTime * speed;
 
+        // update the moving value
         if (moveValue != Vector2.zero)
         {
             lateValue = moveValue;
