@@ -27,10 +27,8 @@ public class Dialogue : MonoBehaviour
     void FixedUpdate()
     {
         float submitValue = submit.ReadValue<float>();
-        // Debug.Log(submitTimer);
         if (submitValue == 1 && submitTimer <= 0)
         {
-            Debug.Log("HIT");
             if (textComponent.text == lines[index])
             {
                 nextLine();
