@@ -14,20 +14,20 @@ public class Dialogue : MonoBehaviour
     public float textSpeed;
     private int index;
     private float submitTimer = 0.2f;
+    private bool Dialogueon;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         submit = InputSystem.actions.FindAction("Submit");
         cancel = InputSystem.actions.FindAction("Cancel");
         textComponent.text = string.Empty;
-        StartDialogue();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         float submitValue = submit.ReadValue<float>();
-        if (submitValue == 1 && submitTimer <= 0)
+        if (submitValue == 1 && submitTimer <= 0 && Dialogueon)
         {
             if (textComponent.text == lines[index])
             {
@@ -49,6 +49,8 @@ public class Dialogue : MonoBehaviour
     {
         index = 0;
         StartCoroutine(TypeLine());
+        gameObject.SetActive(true);
+        Dialogueon = true;
     }
     IEnumerator TypeLine()
     {
@@ -69,6 +71,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            Time.timeScale = 1;
             gameObject.SetActive(false);
         }
     }
