@@ -15,7 +15,6 @@ public class Dialogue : MonoBehaviour
     private int index;
     private float submitTimer = 0.2f;
     private bool Dialogueon;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         submit = InputSystem.actions.FindAction("Submit");
@@ -23,8 +22,7 @@ public class Dialogue : MonoBehaviour
         textComponent.text = string.Empty;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float submitValue = submit.ReadValue<float>();
         if (submitValue == 1 && submitTimer <= 0 && Dialogueon)
@@ -45,11 +43,11 @@ public class Dialogue : MonoBehaviour
 
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
+        gameObject.SetActive(true);
         index = 0;
         StartCoroutine(TypeLine());
-        gameObject.SetActive(true);
         Dialogueon = true;
     }
     IEnumerator TypeLine()
@@ -73,6 +71,8 @@ public class Dialogue : MonoBehaviour
         {
             Time.timeScale = 1;
             gameObject.SetActive(false);
+            textComponent.text = string.Empty;
+            Dialogueon = false;
         }
     }
 }

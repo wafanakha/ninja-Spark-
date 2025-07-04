@@ -6435,10 +6435,10 @@ GameObject:
   - component: {fileID: 1590456607}
   - component: {fileID: 1590456610}
   - component: {fileID: 1590456609}
-  - component: {fileID: 1590456608}
+  - component: {fileID: 1590456611}
   m_Layer: 5
   m_Name: DialogueBox
-  m_TagString: Untagged
+  m_TagString: dialogueBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6463,25 +6463,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -201.08}
   m_SizeDelta: {x: -200, y: -515.7579}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1590456608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590456606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 752067b057674fe46962a5274c0569a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 508765526}
-  lines:
-  - dfas f asdf sdffsdafasdfsdaf
-  - d fasdf asf sadf sdf a
-  - 'sdfsdfasdfasdfasdf asdfa sdf '
-  - 'asd fasdf asdf asdf sdf '
-  textSpeed: 0.1
 --- !u!114 &1590456609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6520,6 +6501,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590456606}
   m_CullTransparentMesh: 1
+--- !u!114 &1590456611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590456606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752067b057674fe46962a5274c0569a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 508765526}
+  lines:
+  - I WANT TO BE
+  - THE HERO THAT
+  - PROTECT ALL
+  textSpeed: 0.05
 --- !u!1 &1759518771
 GameObject:
   m_ObjectHideFlags: 0
@@ -6549,6 +6548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69073bc0494f1414a8569416492993e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialouge_script: {fileID: 1590456611}
 --- !u!4 &1759518773
 Transform:
   m_ObjectHideFlags: 0
