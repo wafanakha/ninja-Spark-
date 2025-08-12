@@ -17,19 +17,24 @@ public class Dialogue : MonoBehaviour
     private bool Dialogueon;
     void Start()
     {
+        // init input 
         submit = InputSystem.actions.FindAction("Submit");
         cancel = InputSystem.actions.FindAction("Cancel");
+        // init text
         textComponent.text = string.Empty;
+        StartDialogue();
     }
 
     void FixedUpdate()
     {
+        // read the input 
         float submitValue = submit.ReadValue<float>();
         if (submitValue == 1 && submitTimer <= 0 && Dialogueon)
         {
             if (textComponent.text == lines[index])
             {
                 nextLine();
+                // reset timer
                 submitTimer = 0.2f;
             }
             else
@@ -52,6 +57,7 @@ public class Dialogue : MonoBehaviour
     }
     IEnumerator TypeLine()
     {
+        // produce every letter on a line
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
@@ -63,12 +69,14 @@ public class Dialogue : MonoBehaviour
     {
         if (index < lines.Length - 1)
         {
+            // update line and reset text
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
         else
         {
+            // stop dialogue
             Time.timeScale = 1;
             gameObject.SetActive(false);
             textComponent.text = string.Empty;
