@@ -57,7 +57,6 @@ public class PlayerMove : MonoBehaviour
         animator.SetFloat("velx", moveValue.x);
         animator.SetFloat("vely", moveValue.y);
 
-        // attack & cooldown
 
         // init weapon position and rotation
         Vector2 weaponPos = Vector2.zero;
