@@ -58,9 +58,13 @@ public class PlayerMove : MonoBehaviour
         animator.SetFloat("vely", moveValue.y);
 
         // attack & cooldown
+
+        // init weapon position and rotation
         Vector2 weaponPos = Vector2.zero;
         float weaponRot = 0;
         Vector2 weaponValue = Vector2.zero;
+
+        // change weapon according to motion direction
         if (attackValue == 1 && Attacktimer <= 0)
         {
             if (moveValue != Vector2.zero)
@@ -71,6 +75,8 @@ public class PlayerMove : MonoBehaviour
             {
                 weaponValue = lateValue;
             }
+
+            // change weapon pos and rot according weapon direction
             if (weaponValue.x >= 0.1)
             {
                 weaponPos.Set(0.94f, -0.35f);
@@ -109,7 +115,7 @@ public class PlayerMove : MonoBehaviour
             weapon.SetActive(false);
         }
 
-        // set value if player stop moving
+        // set motion if player stop moving
         if (moveValue == Vector2.zero)
         {
             animator.SetBool("isStop", true);
@@ -128,7 +134,7 @@ public class PlayerMove : MonoBehaviour
         // move
         Player_rigidbody.position += moveValue * Time.deltaTime * speed;
 
-        // update the moving value
+        // update the last motion value
         if (moveValue != Vector2.zero)
         {
             lateValue = moveValue;
