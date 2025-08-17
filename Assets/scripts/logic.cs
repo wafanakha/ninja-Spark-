@@ -5,19 +5,19 @@ using UnityEngine.InputSystem;
 public class logic : MonoBehaviour
 {
     InputAction cancel;
-    InputAction submit;
 
-    GameObject dialoguebox;
     private float submitTimer = 0.2f;
 
+    public GameObject DialogueBox;
 
     public Dialogue dialouge_script;
+    public PlayerMove player_script;
+    public enemy enemy_script;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        dialoguebox = GameObject.FindGameObjectWithTag("dialogueBox");
         cancel = InputSystem.actions.FindAction("Cancel");
-        submit = InputSystem.actions.FindAction("Submit");
 
     }
 
@@ -29,6 +29,18 @@ public class logic : MonoBehaviour
         {
             dialouge_script.StartDialogue();
             submitTimer = 0.2f;
+
+        }
+
+        if (DialogueBox.activeInHierarchy == true)
+        {
+            player_script.enabled = false;
+            enemy_script.enabled = false;
+        }
+        else
+        {
+            player_script.enabled = true;
+            enemy_script.enabled = true;
         }
         submitTimer -= Time.deltaTime;
     }
