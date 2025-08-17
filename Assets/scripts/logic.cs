@@ -10,6 +10,7 @@ public class logic : MonoBehaviour
     GameObject dialoguebox;
     private float submitTimer = 0.2f;
 
+
     public Dialogue dialouge_script;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

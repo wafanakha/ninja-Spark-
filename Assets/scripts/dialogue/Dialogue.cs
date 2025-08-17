@@ -22,7 +22,6 @@ public class Dialogue : MonoBehaviour
         cancel = InputSystem.actions.FindAction("Cancel");
         // init text
         textComponent.text = string.Empty;
-        StartDialogue();
     }
 
     void FixedUpdate()
