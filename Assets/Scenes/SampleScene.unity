@@ -6431,7 +6431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1590456607
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6503,10 +6503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 508765526}
-  lines:
-  - I WANT TO BE
-  - THE HERO THAT
-  - PROTECT ALL
+  lines: []
   textSpeed: 0.05
 --- !u!1 &1759518771
 GameObject:
@@ -6537,6 +6534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69073bc0494f1414a8569416492993e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueBox: {fileID: 1590456606}
   dialouge_script: {fileID: 1590456611}
   player_script: {fileID: 1260630267}
   enemy_script: {fileID: 6257159830574155503}
@@ -7076,11 +7074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3291295708789523028, guid: a91c41a139c85e04185d18244c64c679, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.59
+      value: 10.52
       objectReference: {fileID: 0}
     - target: {fileID: 3291295708789523028, guid: a91c41a139c85e04185d18244c64c679, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.88
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 3291295708789523028, guid: a91c41a139c85e04185d18244c64c679, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7113,6 +7111,22 @@ PrefabInstance:
     - target: {fileID: 3291295708789523028, guid: a91c41a139c85e04185d18244c64c679, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856825491476488790, guid: a91c41a139c85e04185d18244c64c679, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 1590456611}
+    - target: {fileID: 5856825491476488790, guid: a91c41a139c85e04185d18244c64c679, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856825491476488790, guid: a91c41a139c85e04185d18244c64c679, type: 3}
+      propertyPath: 'lines.Array.data[0]'
+      value: Helo Traveler
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856825491476488790, guid: a91c41a139c85e04185d18244c64c679, type: 3}
+      propertyPath: 'lines.Array.data[1]'
+      value: I am donkey
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

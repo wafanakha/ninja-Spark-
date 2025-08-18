@@ -76,7 +76,6 @@ public class Dialogue : MonoBehaviour
         else
         {
             // stop dialogue
-            Time.timeScale = 1;
             gameObject.SetActive(false);
             textComponent.text = string.Empty;
             Dialogueon = false;

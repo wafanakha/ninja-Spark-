@@ -6,7 +6,6 @@ public class logic : MonoBehaviour
 {
     InputAction cancel;
 
-    private float submitTimer = 0.2f;
 
     public GameObject DialogueBox;
 
@@ -18,19 +17,12 @@ public class logic : MonoBehaviour
     void Start()
     {
         cancel = InputSystem.actions.FindAction("Cancel");
-
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float submitValue = cancel.ReadValue<float>();
-        if (submitValue == 1 && submitTimer <= 0)
-        {
-            dialouge_script.StartDialogue();
-            submitTimer = 0.2f;
 
-        }
 
         if (DialogueBox.activeInHierarchy == true)
         {
@@ -42,6 +34,5 @@ public class logic : MonoBehaviour
             player_script.enabled = true;
             enemy_script.enabled = true;
         }
-        submitTimer -= Time.deltaTime;
     }
 }
