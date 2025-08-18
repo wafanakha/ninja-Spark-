@@ -9,14 +9,12 @@ public class npcDial : MonoBehaviour
 
     public Dialogue dialogue;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cancel = InputSystem.actions.FindAction("Cancel");
 
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
 
