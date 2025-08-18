@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3291295708789523028}
   - component: {fileID: 3964193593784754457}
   - component: {fileID: 7065402421191493003}
+  - component: {fileID: 5856825491476488790}
   m_Layer: 0
   m_Name: npc
   m_TagString: Untagged
@@ -119,12 +120,25 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.044706345, y: -0.4185115}
-  m_Radius: 0.99899065
+  m_Offset: {x: -0.009963989, y: -0.11026657}
+  m_Radius: 1.5445795
+--- !u!114 &5856825491476488790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737762153307979636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e35080f8666154984f827b22b01f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines: []
 --- !u!1 &7311391559373066999
 GameObject:
   m_ObjectHideFlags: 0

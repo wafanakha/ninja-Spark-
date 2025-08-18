@@ -5,30 +5,34 @@ using UnityEngine.InputSystem;
 public class logic : MonoBehaviour
 {
     InputAction cancel;
-    InputAction submit;
 
-    GameObject dialoguebox;
-    private float submitTimer = 0.2f;
+
+    public GameObject DialogueBox;
 
     public Dialogue dialouge_script;
+    public PlayerMove player_script;
+    public enemy enemy_script;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        dialoguebox = GameObject.FindGameObjectWithTag("dialogueBox");
         cancel = InputSystem.actions.FindAction("Cancel");
-        submit = InputSystem.actions.FindAction("Submit");
-
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float submitValue = cancel.ReadValue<float>();
-        if (submitValue == 1 && submitTimer <= 0)
+
+
+        if (DialogueBox.activeInHierarchy == true)
         {
-            dialouge_script.StartDialogue();
-            submitTimer = 0.2f;
+            player_script.enabled = false;
+            enemy_script.enabled = false;
         }
-        submitTimer -= Time.deltaTime;
+        else
+        {
+            player_script.enabled = true;
+            enemy_script.enabled = true;
+        }
     }
 }
