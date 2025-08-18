@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class npcDial : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class npcDial : MonoBehaviour
 
     public Dialogue dialogue;
 
+    public Sprite potrait;
     void Start()
     {
         cancel = InputSystem.actions.FindAction("Cancel");
@@ -23,6 +25,8 @@ public class npcDial : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
+
+        dialogue.potrait = potrait;
         dialogue.lines = lines;
         float submitValue = cancel.ReadValue<float>();
         if (submitValue == 1 && submitTimer <= 0)
