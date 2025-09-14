@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class weapon : MonoBehaviour
@@ -6,7 +7,9 @@ public class weapon : MonoBehaviour
     public float Damage;
 
     // weapons
-
+    public List<Sprite> Weapons;
+    public List<Sprite> WeaponsInHands;
+    public List<Sprite> projectile;
     void Start()
     {
 
