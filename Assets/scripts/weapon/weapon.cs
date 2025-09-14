@@ -4,13 +4,14 @@ using UnityEngine;
 public class weapon : MonoBehaviour
 {
     public float Damage;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    // weapons
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
