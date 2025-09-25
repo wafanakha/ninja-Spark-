@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7c41b08570f48a74db7dc1dc61784bc3
+guid: 4acf9ff87ca1f8d41a302cb39b6506fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7479996665371201687
-    second: SpriteInHand_0
+      213: -6251451809504726511
+    second: Sprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -148,17 +148,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteInHand_0
+      name: Sprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 6
-        height: 10
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7909e8026594ec760800000000000000
-      internalID: 7479996665371201687
+      spriteID: 1127ffb63b16e39a0800000000000000
+      internalID: -6251451809504726511
       vertices: []
       indices: 
       edges: []
@@ -177,7 +190,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +200,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SpriteInHand_0: 7479996665371201687
+      Sprite_0: -6251451809504726511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

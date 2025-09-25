@@ -6869,6 +6869,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d8163c112e9557a49a95e36d53c29bd4, type: 3}
   - {fileID: 21300000, guid: ea4c4fb272375b641a338fbaee245e56, type: 3}
   - {fileID: 21300000, guid: 1e3011f916ac317428aaa78e3fbf039a, type: 3}
+  - {fileID: 21300000, guid: 40bd1ff463dfa8e4aa98f9411022663c, type: 3}
   WeaponsInHands:
   - {fileID: 7479996665371201687, guid: eabea77dba3e9034fab73e7e9e7177c5, type: 3}
   - {fileID: 7479996665371201687, guid: 4262c787e016a3d4db2e21d88b189e1e, type: 3}
@@ -6880,6 +6881,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a99ce3826fe968c4a8de13fc9a3560c8, type: 3}
   - {fileID: 21300000, guid: f322fc646273c694cb69493d5ee1cc9e, type: 3}
   - {fileID: 21300000, guid: 20f53e63cb8c0ba4d80b22704830502a, type: 3}
+  - {fileID: 21300000, guid: 7c41b08570f48a74db7dc1dc61784bc3, type: 3}
   projectile:
   - {fileID: 21300000, guid: d1b1450812660774f99f72fd22b2c1a1, type: 3}
 --- !u!1 &1824776974
