@@ -1,16 +1,20 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class weapon : MonoBehaviour
 {
     public float Damage;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    // weapons
+    public List<Sprite> Weapons;
+    public List<Sprite> WeaponsInHands;
+    public List<Sprite> projectile;
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 

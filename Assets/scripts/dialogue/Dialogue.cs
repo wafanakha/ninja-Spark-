@@ -3,7 +3,8 @@ using TMPro;
 using System.Collections;
 using System;
 using UnityEngine.InputSystem;
-
+using NUnit.Framework.Constraints;
+using UnityEngine.UI;
 public class Dialogue : MonoBehaviour
 {
     InputAction submit;
@@ -15,6 +16,8 @@ public class Dialogue : MonoBehaviour
     private int index;
     private float submitTimer = 0.2f;
     private bool Dialogueon;
+    public GameObject potraitBox;
+    public Sprite potrait;
     void Start()
     {
         // init input 
@@ -49,6 +52,8 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
+        Image image = potraitBox.GetComponent<Image>();
+        image.sprite = potrait;
         gameObject.SetActive(true);
         index = 0;
         StartCoroutine(TypeLine());

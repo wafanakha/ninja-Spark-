@@ -114,7 +114,7 @@ public class PlayerMove : MonoBehaviour
             weapon.SetActive(false);
         }
 
-        // set motion if player stop moving
+        // set motion value if player stop moving
         if (moveValue == Vector2.zero)
         {
             animator.SetBool("isStop", true);
