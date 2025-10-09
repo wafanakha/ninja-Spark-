@@ -118,12 +118,10 @@ public class PlayerMove : MonoBehaviour
         if (moveValue == Vector2.zero)
         {
             animator.SetBool("isStop", true);
-
         }
         else
         {
             animator.SetBool("isStop", false);
-
         }
         // set animator value if get hit
         if (inframes <= 0.6f)
